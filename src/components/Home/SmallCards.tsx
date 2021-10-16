@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SmallCard from './SmallCard';
 
 interface Props {
   users: User[];
@@ -9,8 +10,8 @@ const SmallCards: React.FC<Props> = ({ users }) => {
   console.log(users);
   return (
     <StyledContainer>
-      {users.map((el, idx) => (
-        <StyledCard key={idx}></StyledCard>
+      {users.map((user, idx) => (
+        <SmallCard key={idx} user={user}></SmallCard>
       ))}
     </StyledContainer>
   );
@@ -26,11 +27,4 @@ const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-`;
-const StyledCard = styled.div`
-  width: calc((100% - 6px) / 2);
-  height: calc((100% - 6px) / 2);
-  margin-bottom: 6px;
-  background: red;
-  border-radius: 8px;
 `;
