@@ -20,6 +20,8 @@ const StyledMobildBody = styled.section`
   height: 660px;
   background-color: #fff;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 const StyledBackground = styled.div`

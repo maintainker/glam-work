@@ -76,7 +76,7 @@ const StyledContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  margin: 12px 0;
+  margin: 8px 0;
 `;
 const StyledImageCard = styled.div<{ imgUrl: string }>`
   width: 100%;

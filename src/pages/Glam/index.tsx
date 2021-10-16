@@ -1,3 +1,4 @@
+import RecommandCard from 'components/Home/RecommandCard';
 import SmallCards from 'components/Home/SmallCards';
 import UserCard from 'components/Home/UserCard';
 import DefaultLayout from 'components/Layout';
@@ -112,6 +113,9 @@ const GlamPage: React.FC = () => {
       case 'more': {
         const users = el.data as User[];
         return <SmallCards users={users} />;
+      }
+      case 'recommand': {
+        return <RecommandCard />;
       }
       default:
         return <></>;
