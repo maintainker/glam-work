@@ -1,13 +1,14 @@
+import AdvCard from 'components/Home/AdvCard';
 import RecommandCard from 'components/Home/RecommandCard';
 import SmallCards from 'components/Home/SmallCards';
 import UserCard from 'components/Home/UserCard';
-import DefaultLayout from 'components/Layout';
+import { DefaultLayout } from 'components/Layout';
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 interface Data {
   type: 'user' | 'recommand' | 'adv' | 'more';
-  data: User | User[] | string | null;
+  data: User | User[] | Advertise | null;
 }
 
 const data: Data[] = [
@@ -75,7 +76,12 @@ const data: Data[] = [
   },
   {
     type: 'adv',
-    data: 'https://www.glam.am/',
+    data: {
+      url: 'https://www.glam.am/',
+      imgUrl: 'https://image.shutterstock.com/image-photo/airplane-sky-sunrise-sunset-260nw-1931146130.jpg',
+      title: '빠르게 관심을 받아보세요',
+      description: '평소보다 2배 이상 회원님의 프로필을 등장시켜 매력적인 상대를 많이 만날 수 있습니다.',
+    },
   },
   {
     type: 'user',
@@ -116,6 +122,10 @@ const GlamPage: React.FC = () => {
       }
       case 'recommand': {
         return <RecommandCard />;
+      }
+      case 'adv': {
+        const adv = el.data as Advertise;
+        return <AdvCard adv={adv} />;
       }
       default:
         return <></>;

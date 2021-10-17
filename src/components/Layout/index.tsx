@@ -1,25 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
-import TabBottom from './TabBottom';
-import TabHeader from './TabHeader';
+import DefaultLayout from './DefaultLayout';
 
-const DefaultLayout: React.FC = ({ children }) => {
-  return (
-    <>
-      <TabHeader />
-      <StyledBody>{children}</StyledBody>
-      <TabBottom />
-    </>
-  );
-};
-
-export default DefaultLayout;
-
-const StyledBody = styled.div`
-  top: 50px;
-  bottom: 70px;
-  left: 0;
-  right: 0;
-  position: absolute;
-  overflow: scroll;
-`;
+export { default as DefaultLayout } from './DefaultLayout';
+export { default as ModalLayout } from './ModalLayout';
