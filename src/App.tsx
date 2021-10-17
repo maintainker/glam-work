@@ -6,7 +6,7 @@ import MyPage from 'pages/Mypage';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/glam-work/build">
       <MobileFrame>
         <Switch>
           <Route exact path="/home" component={GlamPage} />
