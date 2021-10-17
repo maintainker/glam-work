@@ -10,12 +10,14 @@ declare interface User {
 declare interface UserProfile {
   imgUrl: string[];
   nickname: string;
-  birth: number;
+  gender: string;
+  birth: string;
   address: string;
   description: string;
   options: string[];
   height: string;
   body: string;
+  company: string;
   job: string;
   education: string;
   school: string;
